@@ -1,0 +1,6 @@
+{
+  "remotes": {
+    "penniez": "git@github.com:YOUR_ORG_OR_USER/penniez.git",
+    "nicque": "git@github.com:YOUR_ORG_OR_USER/nicque.git"
+  }
+}

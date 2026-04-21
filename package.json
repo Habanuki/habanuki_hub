@@ -1,0 +1,30 @@
+{
+  "name": "habanuki_hub",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.18.0"
+  },
+  "scripts": {
+    "dev": "npm run sync-games && next dev",
+    "build": "npm run sync-games && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "sync-games": "node scripts/sync-games.mjs",
+    "push-all": "node scripts/push-all.mjs",
+    "easy-push": "node scripts/easy-push.mjs"
+  },
+  "dependencies": {
+    "next": "14.2.14",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "typescript": "5.5.4",
+    "@types/node": "20.14.12",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.14"
+  }
+}
