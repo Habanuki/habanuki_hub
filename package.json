@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "npm run sync-games && next dev",
     "build": "npm run sync-games && next build",
+    "prepare-deploy": "node scripts/prepare-deploy.mjs",
+    "deploy-local": "node scripts/deploy-local.mjs",
     "start": "next start",
     "lint": "next lint",
     "sync-games": "node scripts/sync-games.mjs",

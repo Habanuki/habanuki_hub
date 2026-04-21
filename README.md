@@ -61,6 +61,24 @@ When configured, the admin UI will commit changes to `ben/<slug>/game.meta.json`
 
 4. Run `npm run sync-games`.
 
+## Including games stored outside this repo
+
+If you keep game sources outside this repository (for example `../penniez`), you can add them to the hub at build time by creating `games.sources.json` at the repository root. Use `games.sources.example.json` as a template:
+
+```json
+{
+  "sources": [
+    { "slug": "penniez", "path": "../penniez" },
+    { "slug": "nicque", "path": "../nicque" }
+  ]
+}
+```
+
+Rules:
+- If a slug exists both under `ben/<slug>` and in `games.sources.json`, the `ben/` folder wins (to avoid accidental overwrites).
+- Paths in `games.sources.json` may be absolute or relative to the repository root.
+- Run `npm run sync-games` locally to copy external games into `public/games` before building or deploying.
+
 ## Keeping separate game repos in sync (optional)
 
 If you also keep `penniez` and `nicque` as separate GitHub repos, use `git subtree` mirroring:

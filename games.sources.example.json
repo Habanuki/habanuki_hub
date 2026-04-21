@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "slug": "penniez",
+      "path": "../penniez"
+    },
+    {
+      "slug": "nicque",
+      "path": "../nicque"
+    }
+  ]
+}
